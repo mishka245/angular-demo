@@ -1,5 +1,5 @@
-import {Ingredient} from "../shared/ingredient.model";
-import {EventEmitter} from "@angular/core";
+import {Ingredient} from '../shared/ingredient.model';
+import {EventEmitter} from '@angular/core';
 import {Subject} from 'rxjs';
 
 export class ShoppingListService {
@@ -31,7 +31,7 @@ export class ShoppingListService {
   }
 
   public deleteItem(index: number) {
-    this.ingredients.splice(index,1);
+    this.ingredients.splice(index, 1);
     this.ingredientsChanged.next(this.ingredients.slice());
   }
 }
