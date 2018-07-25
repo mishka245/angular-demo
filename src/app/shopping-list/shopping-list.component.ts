@@ -20,4 +20,8 @@ export class ShoppingListComponent implements OnInit {
       .subscribe((ingredients: Ingredient[]) => this.ingredients = ingredients);
 
   }
+
+  onEditItem(i:number) {
+    this.shoppingListService.startedEditing.next(i);
+  }
 }
